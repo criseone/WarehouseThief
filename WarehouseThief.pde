@@ -169,7 +169,6 @@ void drawGameWonScreen() {
 
 void drawGame() {
   background(palette1);
-  
   // call the display function on all objects   
   myThief.display();
   for (Guard object : GuardsHorizontal) {
@@ -201,6 +200,8 @@ void drawGame() {
   if (Items.size() == 0) {
     gameStatus = gameWon;
   }
+  
+  
   checkCollisions();
 }
 
