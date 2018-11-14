@@ -31,7 +31,7 @@ class GameObject {
   }
 
   void collision() {
-    display = false;
+    display = true;
   };
 
   boolean checkCollision(GameObject otherObject) {

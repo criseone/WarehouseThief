@@ -5,15 +5,16 @@ class Guard extends GameObject {
   }
   void display() {
     super.display();
-    if (display) {
-      fill(palette4);
-      ellipse(position.x, position.y, diameter, diameter);
-    }
+    pushStyle();
+    pushMatrix();
+    translate(position.x, position.y);
+    rotate(rotation.heading());
+    imageMode(CENTER);
+    PImage img;
+    img = loadImage("Guard.png");
+    image(img, 0, 0);
+    popMatrix();
+    popStyle();
+ 
   }
-  void collision() {
-    // draw explosion 
-    fill(palette3);
-    ellipse(position.x, position.y, 60, 60);
-    super.collision();
-  };
 }

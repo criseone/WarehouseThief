@@ -2,7 +2,7 @@ class Rack extends GameObject {
   int id;
   Rack(PVector position, PVector direction)
   {
-    super(position, direction, 7, 10, 1);   // position,  direction,  diameter, speed, damper
+    super(position, direction, 7, 10, 1);   // position
   }
 
   void display()
@@ -12,8 +12,9 @@ class Rack extends GameObject {
       pushStyle();
       fill(palette3);
       noStroke();
-      ellipse(position.x, position.y, 60, 60);
-      popStyle();
+      rectMode(CENTER);
+      rect(position.x, position.y, 60, 60);
+   popStyle();
     }
   }
   void screenWrap() {
