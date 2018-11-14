@@ -24,7 +24,7 @@ final color palette2 = color(85, 103, 106 );
 final color palette3 = color(108, 122, 125 );
 final color palette4 = color(0, 0, 0 );
 
-//Grid
+//fake grid
 int GuardArrayH[] = {200, 400, 600, 800, 1000};
 int GuardArrayV[] = {200, 400, 600, 800, 1000};
 int RackArrayH[] = {75, 275, 475, 675, 875};
@@ -148,7 +148,7 @@ void drawStartScreen() {
   textAlign(CENTER);
   textSize(40);
   fill(palette2);
-  text("PRESS ENTER TO START\nCOLLECT ALL ITEMS AND\nAVOID THE SECURITY GUARDS", width/2, height/2);
+  text("PRESS ENTER TO START\nCOLLECT THE LOOT AND\nAVOID THE SECURITY GUARDS", width/2, height/2);
 }
 
 void drawGameOverScreen() {

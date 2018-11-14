@@ -9,11 +9,16 @@ class Item extends GameObject {
   {
     super.display();
     if (display) {
-      pushStyle();
-      fill(palette2);
-      noStroke();
-      ellipse(position.x, position.y, 30, 30);
-      popStyle();
+     pushStyle();
+    pushMatrix();
+    translate(position.x, position.y);
+    rotate(rotation.heading());
+    imageMode(CENTER);
+    PImage img;
+    img = loadImage("item.png");
+    image(img, 0, 0);
+    popMatrix();
+    popStyle();
     }
   }
   void screenWrap() {
